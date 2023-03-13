@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Variable HTML</h1>
+    {% if user_logged_in %}
+    <h1> Welcome Back </h1>
+    {% endif %}
+
+
+    <h1> Nama saya adalah {{first_name | capfirst}} {{last_name | capfirst}}</h1>
+
+    {% for item in list %}
+
+    <li>{{item}}</li>
+    
+    {% endfor %}
+
+    <h2>{{dictonary.inside_key}}</h2>
+
+    <h2><a href = "{% url 'first_app:example-view' %}">Clicl Me</a></h2>
+</body>
+</html>
